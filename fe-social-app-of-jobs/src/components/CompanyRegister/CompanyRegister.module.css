@@ -1,0 +1,13 @@
+.companyRegisterFrm .icon {
+  color: var(--title-color);
+}
+
+.companyRegisterFrm .field input {
+  font-size: 14px;
+}
+
+.companyRegisterFrm .lbSignUpFrm {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 14px;
+}

@@ -1,0 +1,93 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Name {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.tittle {
+  font-size: 1.5rem;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-left: 200px
+}
+
+
+.backButton {
+  background-color: transparent;
+  border: none;
+  color: #28a745;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 480px;
+}
+.details {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 40px;
+}
+
+.introduction {
+  margin-bottom: 15px;
+  font-weight: bold;
+white-space: nowrap;
+}
+
+.h {
+  margin-bottom: 10px;
+}
+
+.PhoneNumber,
+.Email,
+.Dob,
+.Gender,
+.Address {
+  margin: 10px 0;
+  font-weight: bold;
+white-space: nowrap;
+}
+  
+  .downloadButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 160px;
+  }
+  
+  .downloadButton:hover {
+    background-color: #218838;
+  }
+  

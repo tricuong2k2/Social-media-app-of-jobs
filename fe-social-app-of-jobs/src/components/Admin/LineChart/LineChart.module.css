@@ -1,0 +1,5 @@
+.lineChart {
+  display: flex;
+  justify-content: center;
+  max-height: 384px;
+}

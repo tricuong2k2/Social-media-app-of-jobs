@@ -1,0 +1,94 @@
+.avatarWrapper {
+  text-align: center;
+}
+
+.lbUpdateFrm {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.info .adminName {
+  /* margin-top: 12px; */
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.info .adminName,
+.info .role {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.info .role {
+  margin: 4px 0 12px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.info .address,
+.info .tel,
+.info .email,
+.info .dob {
+  text-align: center;
+  /* font-weight: 500; */
+  font-weight: 400;
+  font-weight: 500;
+}
+
+.info .address {
+  margin: 6px 0 8px;
+  font-size: 12px;
+}
+
+.info .tel,
+.info .email,
+.info .dob {
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.info .address, 
+.info .tel,
+.info .email,
+.info .dob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.resumes .resume {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 12px;
+  border: 1px solid var(--text-secondary);
+  border-radius: 24px;
+}
+
+.resumes .resume:hover {
+  background-color: var(--bg-blur);
+}
+
+.resumes .resume .cvName {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-secondary);
+}
+
+.resumes .resume .iconPdfFile {
+  color: var(--error-color);
+}
+
+.resumes .resume .iconDocxFile,
+.resumes .resume .iconDocFile {
+  color: #4285F4;
+}

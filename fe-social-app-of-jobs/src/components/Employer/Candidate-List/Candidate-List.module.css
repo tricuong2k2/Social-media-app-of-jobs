@@ -1,0 +1,136 @@
+/* Candidate-List.module.css */
+
+.candidateList {
+  position: relative;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.backButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.backButton:hover {
+  background-color: #0056b3;
+}
+
+.viewDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  color: var(--title-color);
+}
+
+.viewDetail:hover {
+  background-color: #cccccc79;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+}
+
+.resume:hover {
+  background-color: var(--bg-blur);
+}
+
+.resume .cvName {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-secondary);
+}
+
+.resume .iconPdfFile {
+  color: var(--error-color);
+}
+
+.resume .iconDocxFile,
+.resume .iconDocFile {
+  color: #4285F4;
+}
+
+.titleWrapper {
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+}
+
+.back {
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 4px 24px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 16px;
+}
+
+.back:hover {
+  background-color: var(--bg-blur);
+  color: var(--title-color);
+}
+
+.refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 28px;
+}

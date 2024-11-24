@@ -1,0 +1,54 @@
+.cvListContainer {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.emptyContainer {
+    text-align: center;
+}
+
+.cvList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cvListItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cvName {
+    display: flex;
+    align-items: center;
+}
+
+.fileIcon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.cvActions {
+    display: flex;
+    gap: 10px;
+}
+
+.downloadButton {
+    background-color: #1890ff;
+    border-color: #1890ff;
+}
+
+.deleteButton {
+    background-color: #ff4d4f;
+    border-color: #ff4d4f;
+}

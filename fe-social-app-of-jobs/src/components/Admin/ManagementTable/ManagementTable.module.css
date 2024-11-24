@@ -1,0 +1,44 @@
+.update, .hide, .verify, .restore, .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+}
+
+.update {
+  color: var(--title-color);
+}
+
+.hide, .delete {
+  color: var(--error-color);
+}
+
+.verify {
+  color: var(--linkedin-color);
+}
+
+.restore {
+  color: #20bbc9;
+}
+
+.update:hover, .hide:hover, .verify:hover, .restore:hover, .delete:hover {
+  background-color: #cccccc79;
+}
+
+.verify.disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+.verify.disabled:hover {
+  background: none; 
+}
+
+.tabTitle:active:focus:focus-visible:focus-visible {
+  font-weight: 500;
+}

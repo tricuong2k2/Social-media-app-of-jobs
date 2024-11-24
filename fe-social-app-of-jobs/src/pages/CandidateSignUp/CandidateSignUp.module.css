@@ -1,0 +1,68 @@
+.signUpSection .signUpForm, 
+.signUpSection .bgLeft {
+  width: 100%;
+}
+
+.signUpSection a {
+  color: var(--title-color);
+}
+
+.signUpSection .signUpForm {
+  padding: 60px 16px 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: 100vh;
+}
+.signUpSection .signUpForm .mainForm .header {
+  padding-bottom: 24px;
+}
+
+.signUpSection .signUpForm .title {
+  margin: 0px 0px 8px;
+  color: var(--title-color);
+  font-size: 24px;
+}
+
+.signUpSection .signUpForm .authCopyRight {
+  text-align: center;
+  color: var(--title-color);
+  font-size: 14px;
+  margin: 60px 0 16px;
+}
+
+.signUpSection .signUpForm .mainForm {
+  margin: 0px auto;
+  width: 600px;
+}
+
+.signUpSection .signUpForm .mainForm  .useOthers, 
+.signUpSection .signUpForm .desc {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.signUpSection .signUpForm .mainForm .useOthers {
+  text-align: center;
+  margin: 24px 0;
+  font-weight: 400;
+}
+
+.signUpSection .signUpForm .register {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.signUpSection .signUpForm .register .loginNow {
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.signUpSection .signUpForm .register .loginNow:hover {
+  text-decoration: underline;
+}
+
+.signUpSection .bgLeft {
+  background-image: url(https://static.topcv.vn/v4/image/auth/auth_bg_desktop.png);
+  height: 100vh;
+  max-height: 100vh;
+}

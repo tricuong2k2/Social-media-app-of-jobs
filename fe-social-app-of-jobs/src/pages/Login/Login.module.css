@@ -1,0 +1,68 @@
+.loginSection .loginForm, 
+.loginSection .bgLeft {
+  width: 100%;
+}
+
+.loginSection a {
+  color: var(--title-color);
+}
+
+.loginSection .loginForm {
+  padding: 60px 16px 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: 100vh;
+}
+.loginSection .loginForm .mainForm .header {
+  padding-bottom: 24px;
+}
+
+.loginSection .loginForm .title {
+  margin: 0px 0px 8px;
+  color: var(--title-color);
+  font-size: 24px;
+}
+
+.loginSection .loginForm .authCopyRight {
+  text-align: center;
+  color: var(--title-color);
+  font-size: 14px;
+  margin: 60px 0 16px;
+}
+
+.loginSection .loginForm .mainForm {
+  margin: 0px auto;
+  width: 600px;
+}
+
+.loginSection .loginForm .mainForm  .useOthers, 
+.loginSection .loginForm .desc {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.loginSection .loginForm .mainForm .useOthers {
+  text-align: center;
+  margin: 24px 0;
+  font-weight: 400;
+}
+
+.loginSection .loginForm .register {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.loginSection .loginForm .register .signUpNow {
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.loginSection .loginForm .register .signUpNow:hover {
+  text-decoration: underline;
+}
+
+.loginSection .bgLeft {
+  background-image: url(https://static.topcv.vn/v4/image/auth/auth_bg_desktop.png);
+  height: 100vh;
+  max-height: 100vh;
+}

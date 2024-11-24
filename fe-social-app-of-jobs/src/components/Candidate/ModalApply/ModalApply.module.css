@@ -1,0 +1,113 @@
+.heading {
+  padding: 0 32px;
+}
+
+.heading .title {
+  color: var(--title-color);
+}
+
+.applyFormWrapper {
+  height: 384px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 0 32px;
+  border-top: 2px solid var(--container-color);
+  border-bottom: 2px solid var(--container-color);
+}
+
+.applyFormWrapper .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.applyFormWrapper .title .titleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--title-color);
+  font-size: 22px;
+}
+
+.applyFormWrapper .chooseCV .cvWrapper {
+  margin-top: 12px;
+  border: 1px dashed var(--title-color);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.applyFormWrapper .chooseCV .resumesUploaded .itemResume {
+  cursor: pointer;
+  padding: 6px;
+  border: 1px solid var(--container-color);
+  border-radius: 6px;
+  position: relative;
+}
+
+.applyFormWrapper .chooseCV .resumesUploaded .itemResume.choose {
+  border: 1px solid var(--title-color);
+}
+
+.applyFormWrapper .chooseCV .resumesUploaded .itemResume:hover {
+  border: 1px solid var(--title-color);
+}
+
+.applyFormWrapper .chooseCV .resumesUploaded .itemResume:hover::after {
+  content: "Chọn CV";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 2px;
+  background-color: var(--title-color);
+  color: #FFF;
+  border-radius: 2px;
+}
+
+.applyFormWrapper .chooseCV .resumesUploaded .itemResume .viewResume {
+  margin-left: 12px;
+  color: var(--title-color);
+}
+
+.applyFormWrapper .chooseCV .resumesUploaded .itemResume .viewResume:hover {
+  text-decoration: underline;
+}
+
+.avatarUploader {
+  cursor: pointer;
+}
+
+.avatarUploader .contentUpload {
+  padding: 16px;
+}
+
+.avatarUploader:hover .contentUpload {
+  background-color: var(--bg-blur);
+}
+
+.avatarUploader .contentUpload .iconUpload {
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+}
+
+.applyFormWrapper .description .hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.applyFormWrapper .fileUploaded {
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 4px;
+  margin-top: 8px;
+  border-radius: 12px;
+  color: var(--title-color);
+}

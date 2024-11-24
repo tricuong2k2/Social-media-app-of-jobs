@@ -1,0 +1,11 @@
+.adminDashboard .lineChartStatistic {
+  padding: 16px;
+  background-color: #FFF;
+  margin-top: 28px;
+  border-radius: 12px;
+  box-shadow: var(--admin-box-shadow);
+}
+
+.adminDashboard .lineChartStatistic .heading {
+  margin-top: 0;
+}

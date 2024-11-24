@@ -1,0 +1,29 @@
+.savedJobsContainer {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 64px;
+  }
+  
+  .savedJobsContainer h2 {
+    margin-bottom: 20px;
+  }
+  
+  .savedJobsContainer .ant-list-item {
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .savedJobsContainer .ant-list-item-meta-title a {
+    color: #1890ff;
+    font-weight: 500;
+  }
+  
+  .savedJobsContainer .ant-list-item-meta-description {
+    color: #888;
+  }
+  
+  .savedJobsContainer .ant-btn-text {
+    color: #ff4d4f;
+  }
+  

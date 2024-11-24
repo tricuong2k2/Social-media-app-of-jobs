@@ -1,0 +1,34 @@
+
+ .oauthLogin .icon {
+  font-size: 16px;
+}
+
+ .oauthLogin .loginWithGoogle,
+ .oauthLogin .loginWithFacebook, 
+ .oauthLogin .loginWithLinkedin {
+  width: 100%;
+  font-size: 14px;
+}
+
+ .oauthLogin .loginWithGoogle:disabled,
+ .oauthLogin .loginWithFacebook:disabled, 
+ .oauthLogin .loginWithLinkedin:disabled {
+  color: #FFF;
+  opacity: 0.6;
+}
+
+.oauthLogin .loginWithGoogle {
+  background-color: var(--google-color) !important;
+}
+
+.oauthLogin .loginWithFacebook {
+  background-color: var(--facebook-color) !important;
+}
+
+.oauthLogin .loginWithLinkedin {
+  background-color: var(--linkedin-color) !important;
+}
+
+.oauthLogin .confirmPolicy {
+  margin-top: 16px;
+}

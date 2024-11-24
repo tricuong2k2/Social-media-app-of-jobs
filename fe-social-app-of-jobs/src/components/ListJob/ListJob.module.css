@@ -1,0 +1,17 @@
+.title_job:hover{
+    color: #00b14f !important;
+    cursor: pointer;
+    
+}
+.title_job{
+    white-space: nowrap; 
+    max-width: 200px;
+    
+    
+}
+@media (max-width: 300px) {
+    .title_job {
+        white-space: normal; /* Cho phép chữ xuống dòng */
+        word-wrap: break-word; /* Ngắt từ nếu cần thiết */
+    }
+}

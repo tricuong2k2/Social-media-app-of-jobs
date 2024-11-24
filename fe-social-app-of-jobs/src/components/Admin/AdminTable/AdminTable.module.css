@@ -1,0 +1,9 @@
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tableHeader .heading {
+  margin: 0;
+}

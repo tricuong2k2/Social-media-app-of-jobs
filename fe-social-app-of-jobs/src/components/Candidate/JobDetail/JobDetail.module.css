@@ -1,0 +1,200 @@
+.viewDetailJob {
+  background-color: var(--container-color);
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 64px;
+}
+
+.viewDetailJob .detailWrapper {
+  margin: 0 32px;
+  padding: 24px 16px;
+}
+
+.viewDetailJob .detailWrapper .generalInfo,
+.viewDetailJob .detailWrapper .detailInfo,
+.viewDetailJob .detailWrapper .companyInfo,
+.viewDetailJob .detailWrapper .jobInfo,
+.viewDetailJob .detailWrapper .extraInfo {
+  background-color: #FFF;
+  border-radius: 8px;
+}
+
+.viewDetailJob .detailWrapper .generalInfo,
+.viewDetailJob .detailWrapper .detailInfo {
+  padding: 20px 24px;
+}
+
+.viewDetailJob .detailWrapper .companyInfo,
+.viewDetailJob .detailWrapper .jobInfo,
+.viewDetailJob .detailWrapper .extraInfo {
+  padding: 20px;
+}
+
+.viewDetailJob .generalInfo .title {
+  margin-bottom: 24px;
+}
+
+.viewDetailJob .item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewDetailJob .item .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  background-color: var(--title-color);
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.viewDetailJob .item .salary,
+.viewDetailJob .item .location,
+.viewDetailJob .item .experience {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 6px;
+}
+
+.viewDetailJob .item .label {
+  color: var(--text-secondary);
+}
+
+.viewDetailJob .item .value {
+  font-weight: 500;
+}
+
+.viewDetailJob .generalInfo .expSumbitCV {
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  gap: 6px;
+  color: var(--text-secondary);
+  background-color: var(--container-color);
+  padding: 6px 8px;
+}
+
+.viewDetailJob .generalInfo .expSumbitCV .timeSubIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.viewDetailJob .generalInfo .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewDetailJob .generalInfo .actions .btnApply {
+  flex: 1;
+}
+
+.viewDetailJob .actions .btnApply, 
+.viewDetailJob .actions .btnSave {
+  font-weight: 500;
+}
+
+.viewDetailJob .detailInfo .heading {
+  margin-bottom: 12px;
+  border-left: 6px solid var(--title-color);
+  padding-left: 12px;
+}
+
+.viewDetailJob .detailInfo .title {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.viewDetailJob .detailInfo .areaDisplay {
+  border: none;
+  box-shadow: none;
+}
+
+.viewDetailJob .detailInfo .actions .deadlineForSubmission {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.viewDetailJob .companyInfo .logoCompany {
+  width: 92px;
+  height: 92px;
+  padding: 4px;
+  border: 2px solid var(--container-color);
+  border-radius: 6px;
+}
+
+.viewDetailJob .companyInfo .logoCompany img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.viewDetailJob .companyInfo .infoCompanyWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.viewDetailJob .companyInfo .infoItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  width: 25%;
+  color: var(--text-secondary);
+}
+
+.viewDetailJob .companyInfo .value {
+  display: inline-block;
+  width: 214px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.viewDetailJob .companyInfo .website {
+  margin-top: 8px;
+}
+
+.viewDetailJob .companyInfo .website a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+.viewDetailJob .companyInfo .website a:hover {
+  text-decoration: underline;
+}
+
+.viewDetailJob .jobInfo .heading {
+  margin-bottom: 12px;
+}
+
+.viewDetailJob .jobInfo .item {
+  margin: 18px 0;
+}
+
+.viewDetailJob .extraInfo .heading {
+  margin-bottom: 24px;
+} 
+
+.viewDetailJob .extraInfo .jobCategory {
+  padding: 4px 6px;
+  background-color: var(--container-color);
+  color: var(--text-secondary);
+}

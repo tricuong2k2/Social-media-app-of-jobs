@@ -1,0 +1,68 @@
+.signUp .lbSignUpFrm {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.signUp .forgotPassword {
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+.signUp .icon, 
+.signUp .forgotPassword a {
+  color: var(--title-color);
+}
+
+.signUp .btnSignUp, 
+.signUp .btnSignUp:hover {
+  background-color: var(--title-color) !important;
+}
+
+.signUp .btnSignUp {
+  font-size: 14px;
+}
+
+.signUp .btnSignUp:hover {
+  opacity: 0.8;
+}
+
+.signUp .btnSignUp:disabled {
+  color: #FFF;
+  opacity: .7;
+}
+
+.signUp .confirmPolicy {
+  margin: 16px 0;
+}
+
+.signUp .field input {
+  font-size: 14px;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h3 {
+  margin-top: 0;
+}
+
+.center .btnResend {
+  padding: 16px;
+  background-color: var(--bg-blur);
+  color: var(--title-color);
+  border: 1px var(--title-color) solid;
+  cursor: pointer;
+  margin: 12px 42px 0;
+}
+
+.center .btnResend:focus-within, 
+.center .btnResend:hover {
+  color: var(--title-color) !important;
+  border: 1px var(--title-color) solid !important;
+}
+
+.emailImg {
+  width: 84px;
+}

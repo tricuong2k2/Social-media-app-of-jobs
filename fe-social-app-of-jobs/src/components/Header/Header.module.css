@@ -1,0 +1,413 @@
+.headerEmployeer_index {
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(198, 198, 198);
+    position: fixed;
+    top: 0;
+    /* Đặt vị trí cố định tại đầu trang */
+    right: 0;
+    /* Đặt vị trí cố định ở phía bên phải */
+    z-index: 1000;
+    /* Đảm bảo phần tử này nằm trên các phần tử khác */
+    display: flex;
+}
+
+.headerEmployeer_logo {
+    display: flex;
+}
+
+.headerEmployeer_logo h1 {
+    padding-top: 18px;
+    font-size: 25px;
+    color: brown;
+}
+
+.headerEmployeer_logo img {
+    height: 68px;
+    width: 130px;
+    cursor: pointer;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.nav {
+    height: 100%;
+    width: 600px;
+    padding: 0px 50px;
+}
+
+.navLists {
+    list-style-type: none;
+    display: flex;
+
+    align-items: center;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.navLists li a {
+    text-decoration: none;
+    color: rgb(62, 62, 62);
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.navLists li a:hover {
+    color: #00b14f;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0px;
+    margin-right: 50px;
+}
+
+.button_container button {
+    border: none;
+    padding: 14px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #00b14f;
+
+}
+
+.button_login {
+    background-color: #00b14f;
+    color: white;
+    height: 40px;
+}
+
+.button_register {
+    background-color: white;
+    color: #00b14f;
+    border: 1px solid #02180c;
+    height: 40px;
+}
+
+.button_login:hover {
+    background-color: #0fc862;
+    color: white;
+}
+
+.button-register:hover {
+    background-color: rgb(230, 228, 228);
+}
+
+
+/* Phần hover phần navbar CV*/
+.menu_dropdonw {
+    position: relative;
+}
+
+.dropdonw_items_job {
+    position: absolute;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    top: 25px;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid rgb(198, 198, 198);
+    display: none;
+    padding: 30px 20px;
+}
+
+.menu_dropdonw:hover .dropdonw_items_job {
+    display: block;
+}
+
+.dropdonw_items_job li {
+    margin-bottom: 30px;
+
+}
+
+.dropdonw_items_job li a {
+    display: flex;
+    text-align: center;
+    position: relative;
+    padding-left: 30px;
+}
+
+.dropdonw_items_job li a span {
+    position: absolute;
+    left: 0px;
+    transform: translateY(-2px);
+    font-size: 22px;
+    color: #00b14f;
+}
+
+/* Phần hover phần navbar company*/
+.menu_dropdonw_filecv {
+    position: relative;
+}
+
+.dropdown_items_filecv {
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    top: 25px;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid rgb(198, 198, 198);
+    display: none;
+    padding: 30px 20px;
+}
+
+.menu_dropdonw_filecv:hover .dropdown_items_filecv {
+    display: block;
+}
+
+.dropdown_items_filecv li {
+    margin-bottom: 30px;
+
+
+}
+
+.dropdown_items_filecv li a {
+    display: flex;
+    text-align: center;
+    position: relative;
+    padding-left: 30px;
+}
+
+.dropdown_items_filecv li a span {
+    position: absolute;
+    left: 0px;
+    transform: translateY(-2px);
+    font-size: 22px;
+    color: #00b14f;
+}
+
+/* Phần hover phần navbar*/
+.menu_dropdonw_company {
+    position: relative;
+}
+
+.dropdown_items_company {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    top: 25px;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid rgb(198, 198, 198);
+    display: none;
+    padding: 30px 20px;
+}
+
+.menu_dropdonw_company:hover .dropdown_items_company {
+    display: block;
+}
+
+.dropdown_items_company li {
+    margin-bottom: 30px;
+
+}
+
+.dropdown_items_company li a {
+    display: flex;
+    text-align: center;
+    position: relative;
+    padding-left: 30px;
+}
+
+.dropdown_items_company li a span {
+    position: absolute;
+    left: 0px;
+    transform: translateY(-2px);
+    font-size: 22px;
+    color: #00b14f;
+}
+
+.menu_dropdonw_hackjob {
+    position: relative;
+    margin-left: 70px;
+}
+
+.dropdonw_items_hackjob {
+    position: absolute;
+    width: 350px;
+    height: 330px;
+    background-color: white;
+    top: 25px;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid rgb(198, 198, 198);
+    display: none;
+    padding: 30px 20px;
+}
+
+.menu_dropdonw_hackjob:hover .dropdonw_items_hackjob {
+    display: block;
+}
+
+.dropdonw_items_hackjob li {
+    margin-bottom: 30px;
+}
+
+.dropdonw_items_hackjob li a {
+    display: flex;
+    text-align: center;
+    position: relative;
+    padding-left: 30px;
+}
+
+.dropdonw_items_hackjob li a span {
+    position: absolute;
+    left: 0px;
+    transform: translateY(-2px);
+    font-size: 22px;
+    color: #00b14f;
+}
+
+.header_task_profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0px;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+
+.header_task_icon {
+    margin-right: 40px;
+    cursor: pointer;
+    display: flex;
+}
+
+.header_task_icon a {
+    color: #00b14f;
+}
+
+.header_task_icon_noti {
+    height: 40px;
+    width: 40px;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 177, 79, .102);
+}
+
+.header_task_icon_forum {
+    height: 40px;
+    width: 40px;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 177, 79, .102);
+}
+
+.header_profile {
+    position: relative;
+}
+
+.functuon_profile {
+    display: none;
+    position: absolute;
+    height: 210px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    transform: translate(-251px, 0px);
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.header_profile:hover .functuon_profile {
+    display: block;
+
+}
+
+.profile_inf {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 280px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(198, 198, 198);
+}
+
+.edit_inf {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 280px;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 280px;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.edit_inf a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.edit_inf:hover {
+    color: #00b14f;
+    background-color: rgb(231, 231, 231);
+}
+
+.edit_inf:hover a {
+    color: #00b14f;
+    background-color: rgb(231, 231, 231);
+}
+
+.logout:hover {
+    color: #00b14f;
+    background-color: rgb(231, 231, 231);
+}
+
+.logout:hover a {
+    color: #00b14f;
+    background-color: rgb(231, 231, 231);
+}
+
+.edit_inf span {
+    font-size: 22px;
+    color: #00b14f;
+}
+
+.logout span {
+    font-size: 22px;
+    color: #00b14f;
+}

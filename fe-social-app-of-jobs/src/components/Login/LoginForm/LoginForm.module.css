@@ -1,0 +1,40 @@
+.login .lbLoginFrm {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login .forgotPassword {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.login .icon, 
+.login .forgotPassword .resetPassword {
+  color: var(--title-color);
+}
+
+.login .forgotPassword .resetPassword {
+  cursor: pointer;
+}
+
+.login .forgotPassword .resetPassword:hover {
+  text-decoration: underline;
+}
+
+.login .btnLogin, 
+.login .btnLogin:hover {
+  background-color: var(--title-color) !important;
+}
+
+.login .btnLogin {
+  font-size: 14px;
+}
+
+.login .btnLogin:hover {
+  opacity: .8;
+}
+
+.login .field input {
+  font-size: 14px;
+}

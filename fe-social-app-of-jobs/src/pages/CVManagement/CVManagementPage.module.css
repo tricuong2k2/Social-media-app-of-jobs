@@ -1,0 +1,28 @@
+.content {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 20px 10px 20px 100px;
+}
+
+.sider {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 20px 100px 20px 10px;
+    display: inline-block;
+}
+
+.layout {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 64px;
+}
+
+.header {
+    color: #00CC33;
+}
+
+.marginTop {
+    margin-top: 30px;
+}
