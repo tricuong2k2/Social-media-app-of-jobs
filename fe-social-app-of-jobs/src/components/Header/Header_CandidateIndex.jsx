@@ -9,7 +9,10 @@ import styles from "./Header.module.css";
 
 function Header_CandidateIndex() {
     const dispatch = useDispatch();
-    const user = useSelector(state => state.memberReducer);
+    const [user, setUser] = useState(() => {
+        const savedUser = localStorage.getItem('user');
+        return savedUser ? JSON.parse(savedUser) : {};
+    });
     const navigate = useNavigate();
 
     const handleLogout = async () => {

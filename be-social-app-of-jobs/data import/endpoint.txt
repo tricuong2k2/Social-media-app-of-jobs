@@ -1,0 +1,51 @@
+1. get list post *get
+http://localhost:8000/api/posts/get-list?page=1&limit=10
+
+2. get post by id *get
+http://localhost:8000/api/posts/get-id/675a644c0552a42e8aaf17b3
+
+3. get list comment *get
+http://localhost:8000/api/posts/get-comment/675a644c0552a42e8aaf17b3?page=1&limit=10
+
+4. add new post *post
+http://localhost:8000/api/posts/upload
+payload:{
+    "media": files,
+    "content": "This is test",
+    "author_id": "6724d50a642c80eac792ee18",
+    "visibility": "public"
+}
+
+5. edit post *put
+http://localhost:8000/api/posts/edit/675ab6d705a95cf5f5248479
+payload:{
+    "media": files,
+    "content": "This is test",
+    "author_id": "6724d50a642c80eac792ee18",
+    "visibility": "public"
+}
+
+6. delete post *delete
+http://localhost:8000/api/posts/delete/675ab6d705a95cf5f5248479
+
+7. share post *post
+http://localhost:8000/api/posts/share/675a644c0552a42e8aaf17b3
+payload: {
+ "content": "This is test",
+    "author_id": "6724d50a642c80eac792ee18",
+    "visibility": "public"
+}
+
+8. add new comment *post
+http://localhost:8000/api/posts/comment/upload/675a644c0552a42e8aaf17b3
+payload" {
+    "content": "This is test2",
+    "user_id": "6724dac336a01957617b49ac",
+    "parent_id": "675ac222fb9562cb911b4cfd"
+}
+
+9. edit comment *put
+http://localhost:8000/api/posts/comment/edit/675ac222fb9562cb911b4cfd
+
+10.delete comment *delete
+http://localhost:8000/api/posts/comment/edit/675ac222fb9562cb911b4cfd

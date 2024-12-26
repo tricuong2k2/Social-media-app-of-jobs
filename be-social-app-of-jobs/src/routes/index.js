@@ -6,11 +6,14 @@ const companyRoute = require("./company.route");
 const jobCategoryRoute = require("./jobCategory.route");
 const jobRoute = require("./job.route");
 const applicationRoute = require("./application.route");
+const postsRoute = require("./posts.route");
+
 
 const { verifyJwt } = require("../app/middlewares/jwtMiddleware");
 const { roleVerify } = require("../app/middlewares/roleMiddleware");
 
 module.exports = (app) => {
+  app.use("/api/posts", postsRoute)
   app.use("/api/application", verifyJwt, applicationRoute);
   app.use("/api/job", jobRoute);
   app.use("/api/job-category", jobCategoryRoute);

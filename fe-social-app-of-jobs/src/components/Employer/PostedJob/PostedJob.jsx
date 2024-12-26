@@ -11,6 +11,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import AdminTable from "../../Admin/AdminTable/AdminTable";
 import { adminTableThemes } from "../../../helper";
 import ModalPostJob from "../ModalPostJob/ModalPostJob";
+import { CopyOutlined } from '@ant-design/icons';
+import { Input, Button } from 'antd';
 
 function PostedJob() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -191,6 +193,24 @@ function PostedJob() {
   }
 
   const columns = [
+    {
+      title: "ID",
+      dataIndex: "_id",
+      width: "250px",
+      render: (id) => (
+        <Tooltip title="Click to copy">
+          <Tag
+            style={{ cursor: 'pointer', userSelect: 'all' }}
+            onClick={() => {
+              navigator.clipboard.writeText(id);
+              messageApi.success('Đã copy ID!');
+            }}
+          >
+            {id}
+          </Tag>
+        </Tooltip>
+      ),
+    },
     {
       title: "Tên công việc",
       dataIndex: "title",

@@ -11,6 +11,7 @@ import PostedJob from "./components/Admin/PostedJob/PostedJob";
 import PostedJobsOfCompany from "./components/Employer/PostedJob/PostedJob";
 import Admin from "./pages/Admin/Admin";
 import CandidateSignUp from "./pages/CandidateSignUp/CandidateSignUp";
+import SavedPost from "./pages/SavedPost/SavedPost";
 import CompanyProfile from "./pages/CompanyProfile/CompanyProfile";
 import CVManagementPage from "./pages/CVManagement/CVManagementPage";
 import Employer from "./pages/Employer/Employer";
@@ -43,6 +44,7 @@ import SearchJob from "./components/Candidate/Search/SearchJob";
 import { themes } from "./helper";
 import UpdateCandidateInfo from "./pages/CVManagement/UpdateCandidateInfo";
 import Error404 from "./pages/Error/Error404";
+import ProfileUser from "./pages/ProfileUser/ProfileUser";
 
 // import JobDetail from "./components/Employer/Job-Detail/Job-Detail";
 
@@ -67,22 +69,25 @@ function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/employer/index" element={<EmployeerIndex />} />
+          <Route path="/saved-post" element={<SavedPost />} />
+          <Route path="/view-detail-job/:jobId" element={<ViewDetailJob />} />
           <Route path="/candidate/sign-up" element={<CandidateSignUp />} />
           <Route path="/company/company-profile" element={<CompanyProfile />} />
-          
+
+          <Route path="/profile" element={<ProfileUser />} />
           <Route path="/" element={<Home />}>
             <Route index element={<SearchJob />} />
-            <Route path="view-detail-job/:jobId" element={<ViewDetailJob />}/>
+            {/* <Route path="view-detail-job/:jobId" element={<ViewDetailJob />} /> */}
           </Route>
 
           <Route path="/candidate" element={<CandidateIndex />}>
             <Route index element={<SearchJob />} />
             <Route path="cv-management" element={<CVManagementPage />} />
             <Route path="update-info" element={<UpdateCandidateInfo />} />
-            <Route path="view-detail-job/:jobId" element={<ViewDetailJob />}/>
+            {/* <Route path="view-detail-job/:jobId" element={<ViewDetailJob />} /> */}
             <Route path="applied-jobs" element={<AppliedJobs />} />
           </Route>
-          
+
           <Route path="/employer" element={<Employer />}>
             <Route index element={<PostedJobsOfCompany />} />
             <Route path="posted-jobs" element={<PostedJobsOfCompany />} />

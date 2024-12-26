@@ -1,0 +1,242 @@
+.post {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  margin: 30px 0;
+}
+
+.postWrapper {
+  padding: 10px;
+}
+
+.postTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.postTopLeft {
+  display: flex;
+  align-items: center;
+}
+
+.postProfileImg {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.postProfileUsernameDate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.postUsername {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.postDate {
+  font-size: 12px;
+  margin: 2px 10px 0px;
+  cursor: pointer;
+}
+
+.postTopRight {
+  cursor: pointer;
+}
+
+.postCenter {
+  margin: 10px 0;
+  height: auto;
+}
+
+.postText {
+  white-space: pre-line;
+}
+
+.postText:empty {
+  margin-bottom: 0;
+}
+
+.postCenterImg {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(235, 234, 234);
+  background-size: cover;
+}
+
+.postImg {
+  align-items: center;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.postBottomApply {
+  display: flex;
+  justify-content: center;
+}
+
+.postBottom1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postBottomHr {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  opacity: 50%;
+}
+
+.postBottomLeft {
+  display: flex;
+  align-items: center;
+}
+
+.likeIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.postLikeCounter {
+  font-size: 15px;
+}
+
+.postCommentText {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.postBottomButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #00b14f;
+  color: white;
+}
+
+.buttonText {
+  margin-left: 5px;
+  line-height: 48px;
+}
+
+.buttonTextApply {
+  margin-left: 5px;
+  line-height: 48px;
+}
+
+.avatarContainer {
+  width: 40px;
+  /* Kích thước avatar */
+  height: 40px;
+  border-radius: 50%;
+  /* Làm tròn hoàn toàn */
+  background: linear-gradient(135deg, #7effa9, #75ffca, #5fff9c);
+  /* Hiệu ứng gradient */
+  display: flex;
+  /* Căn giữa nội dung */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Hiệu ứng đổ bóng */
+  overflow: hidden;
+  /* Ẩn nội dung vượt ra ngoài */
+  transition: transform 0.3s ease;
+  /* Hiệu ứng hover */
+}
+
+.avatarContainer:hover {
+  transform: scale(1.1);
+  /* Phóng to nhẹ khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Đổ bóng mạnh hơn khi hover */
+}
+
+.avatarIcon {
+  font-size: 20px;
+  /* Kích thước icon */
+  color: #fff;
+  /* Màu icon trắng nổi bật */
+}
+
+.postUsername {
+  margin-left: 16px;
+  /* Khoảng cách giữa avatar và tên */
+  font-size: 18px;
+  /* Kích thước chữ */
+  font-weight: bold;
+  /* Đậm chữ */
+  color: #1c1e21;
+  /* Màu chữ gần giống Facebook */
+}
+
+/* post.css */
+.ant-alert {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ant-alert-success {
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+}
+
+.ant-alert-error {
+  background-color: #fff2f0;
+  border-color: #ffccc7;
+}
+
+.comments-section {
+  padding: 10px 0;
+}
+
+.comment {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.new-comment {
+  margin-top: 10px;
+}
+
+.new-comment button {
+  margin-top: 5px;
+  padding: 5px 15px;
+  background-color: #1677ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-comment button:hover {
+  background-color: #4096ff;
+}

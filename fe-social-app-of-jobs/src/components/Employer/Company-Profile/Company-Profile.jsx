@@ -12,7 +12,7 @@ function CompanyProflie() {
     const [companyName, setCompanyName] = useState(null);
     const [introduct, setIntroduct] = useState(null);
     const [taxCode, setTaxCode] = useState(null);
-    const [companySize, setCompanySize] = useState(null); 
+    const [companySize, setCompanySize] = useState(null);
     const [address, setAddress] = useState([]);
     const [avatar, setAvatar] = useState(null);
 
@@ -28,9 +28,9 @@ function CompanyProflie() {
                 setTaxCode(res.data.info.taxCode);
                 setWebSite(res.data.info.website);
                 setAddress(res.data.info.address);
- //               setProvince(res.data.info.address.province);
- //               setDistrict(res.data.info.address.district);
- //               setWard(res.data.info.address.ward);
+                //               setProvince(res.data.info.address.province);
+                //               setDistrict(res.data.info.address.district);
+                //               setWard(res.data.info.address.ward);
                 setAvatar(res.data.info.logo);
             })
             .catch(err => {
@@ -42,56 +42,58 @@ function CompanyProflie() {
         getCompany();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    
-    
+
+
     const navigate = useNavigate();
     return (
-        <div>
+        console.log('address: ', address),
+        < div >
 
-        <div className={styles.container}>
-            <div className={styles.header}>
-            {avatar ? (
-                    <img 
-                        style={{width:"200px", height:"200px"}} 
-                        src={avatar || "/company.png"} alt='anh'
-                    />
-                ):(
-                    <p></p>
-                )}
-                <h1 className={styles.companyName}> 
-                    {companyName}
-                </h1>
+            <div className={styles.container}>
+                <div className={styles.header}>
+                    {avatar ? (
+                        <img
+                            style={{ width: "200px", height: "200px" }}
+                            src={avatar || "/company.png"} alt='anh'
+                        />
+                    ) : (
+                        <p></p>
+                    )}
+                    <h1 className={styles.companyName}>
+                        {companyName}
+                    </h1>
+                </div>
+                <div className={styles.details}>
+                    <div className={styles.h}>
+                        <p className={styles.introduction}>Giới thiệu về công ty:</p>
+                        <p>{introduct}
+                        </p>
+                    </div>
+                    <div>
+                        <p className={styles.address}>Địa chỉ: </p>
+                        {/* <p>{`${address.detail}, ${address.ward}, ${address.district}, ${address.province}`}</p> */}
+                        <p>{`${address.ward}, ${address.district}, ${address.province}`}</p>
+                    </div>
+                    <div>
+                        <p className={styles.address}>
+                            Trang web: <a href='{webSite}'>{webSite}</a>
+                        </p>
+                        <div>
+                            <span className={styles.employees}>Mã số thuế: </span>
+                            <span>{taxCode}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span className={styles.employees}>Số lượng nhân lực: </span>
+                        <span>{companySize}</span>
+                    </div>
+                </div>
+                <div className={styles.jobActions}>
+                    <button className={styles.editButton} onClick={() => navigate('/employer/company-editprofile')} >Sửa</button>
+                </div>
+
             </div>
-            <div className={styles.details}>
-                <div className={styles.h}>
-                    <p className={styles.introduction}>Giới thiệu về công ty:</p>
-                    <p>{introduct}
-                    </p>
-                </div>
-                <div>
-                    <p className={styles.address}>Địa chỉ: </p>
-                    <p>{address}</p>
-                </div>
-                <div>
-                    <p className={styles.address}>
-                        Trang web: <a href='{webSite}'>{webSite}</a>
-                    </p>
-                <div>
-                    <span className={styles.employees}>Mã số thuế: </span>
-                    <span>{taxCode}</span>
-                </div>   
-                </div>
-                <div>
-                    <span className={styles.employees}>Số lượng nhân lực: </span>
-                    <span>{companySize}</span>
-                </div>
-            </div>
-            <div className={styles.jobActions}>
-            <button className={styles.editButton} onClick={() => navigate('/employer/company-editprofile')} >Sửa</button>
-          </div>   
-            
-        </div>
-        </div>
+        </div >
     );
 };
 

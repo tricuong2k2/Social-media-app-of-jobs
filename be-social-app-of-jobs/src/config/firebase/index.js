@@ -5,7 +5,7 @@ const serviceAccount = require("../secrets/firebase/service-account.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: "gs://social-media-app-of-job.appspot.com",
+  storageBucket: "gs://job-portal-53233.appspot.com",
 });
 
 const bucket = admin.storage().bucket();

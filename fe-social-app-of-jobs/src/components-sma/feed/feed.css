@@ -1,0 +1,15 @@
+.feed {
+    flex: 1;
+}
+
+.feedWrapper {
+    padding: 20px;
+}
+
+.wrapperFeed {
+    padding: 10px 250px;
+}
+
+.profile-feed {
+    padding: 10px 0px !important;
+}

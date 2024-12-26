@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCandidateInfo } from "../../actions";
 import CandidateAvatar from '../Avatar/CandidateAvatar';
+import { useState } from "react";
 
 const userInfoStyle = {
     backgroundColor: '#fff',
@@ -13,7 +14,10 @@ const userInfoStyle = {
 
 const UserInfo = () => {
     const dispatch = useDispatch();
-    const user = useSelector(state => state.memberReducer);
+    const [user, setUser] = useState(() => {
+        const savedUser = localStorage.getItem('user');
+        return savedUser ? JSON.parse(savedUser) : {};
+    });
 
     useEffect(() => {
         const fetchUserData = async () => {

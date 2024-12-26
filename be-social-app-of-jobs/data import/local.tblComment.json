@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "67596763287ea1ac58c3ee79"
+  },
+  "post_id": {
+    "$oid": "675a644c0552a42e8aaf17b3"
+  },
+  "user_id": {
+    "$oid": "6724dac336a01957617b49ac"
+  },
+  "content": "Can I share this post?",
+  "parent_id": null,
+  "created_at": "2024-12-11T09:30:00Z",
+  "updated_at": "2024-12-11T09:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "675a89e20552a42e8aaf17bd"
+  },
+  "content": "Sure, happy with this! <3",
+  "parent_id": {
+    "$oid": "67596763287ea1ac58c3ee79"
+  },
+  "created_at": "2024-12-11T09:45:00Z",
+  "updated_at": "2024-12-11T09:45:00Z",
+  "post_id": {
+    "$oid": "675a644c0552a42e8aaf17b3"
+  },
+  "user_id": {
+    "$oid": "6724d50a642c80eac792ee18"
+  }
+},
+{
+  "_id": {
+    "$oid": "675ac222fb9562cb911b4cfd"
+  },
+  "post_id": {
+    "$oid": "675a644c0552a42e8aaf17b3"
+  },
+  "user_id": {
+    "$oid": "6724dac336a01957617b49ac"
+  },
+  "content": "This is test3",
+  "parent_id": null,
+  "createdAt": {
+    "$date": "2024-12-12T10:59:46.891Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-12T11:02:48.886Z"
+  },
+  "__v": 0
+}]

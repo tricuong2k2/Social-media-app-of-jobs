@@ -12,85 +12,105 @@ import Logo from '../Logo/Logo';
 const EditCompanyProfile = () => {
   const navigate = useNavigate();
 
-  const [cities, setCities] = useState('Hà Nội');
-  const [districts, setDistricts] = useState('Hà Đông');
-  const [wards, setWards] = useState('Mỗ Lao');
+  const [cities, setCities] = useState([]);
+  const [districts, setDistricts] = useState([]);
+  const [wards, setWards] = useState([]);
+
   const [location, setLocation] = useState('116 Hà Nội');
   const [company, setCompany] = useState({});
 
 
   useEffect(() => {
     Promise.all([
-      axios.get("https://vapi.vnappmob.com/api/province/"),
+      axios.get("https://provinces.open-api.vn/api/p/"),
       axios.get(`http://localhost:8000/api/company/info`, {
         withCredentials: true,
       })
     ])
       .then(([resProvinces, resCompanyInfo]) => {
-        const cities = resProvinces.data.results.map((city, index) => ({
+        const cities = resProvinces.data.map((city, index) => ({
           id: index,
-          key: city.province_id,
-          label: city.province_name,
-          value: city.province_name,
+          key: city.code,
+          label: city.name,
+          value: city.name,
         }));
 
         setCities(cities);
         setCompany(resCompanyInfo.data.info);
 
         // Set initial selected city based on current value
-        const selectedCity = cities.find(city => city.value === 'Hà Nội');
-        if (selectedCity) {
-          handleSelectCitites(selectedCity, { key: selectedCity.key });
+        if (resCompanyInfo.data.info?.address?.province) {
+          const selectedCity = cities.find(
+            city => city.value === resCompanyInfo.data.info.address.province
+          );
+          if (selectedCity) {
+            handleSelectCitites(selectedCity);
+          }
         }
       })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSelectCitites = (selectedCity, option) => {
-    setLocation(selectedCity.value);
-    setDistricts([]);
-    setWards([]);
+  const handleSelectCitites = async (selectedCity) => {
+    console.log('selectedCity: ', selectedCity)
+    console.log('selectedCity.key: ', selectedCity.key)
+    try {
+      setLocation(selectedCity.value);
+      setDistricts([]);
+      setWards([]);
 
-    axios.get(`https://vapi.vnappmob.com/api/province/district/${option.key}`)
-      .then(res => {
-        const districts = res.data.results.map((district, index) => ({
-          id: index,
-          key: district.district_id,
-          label: district.district_name,
-          value: district.district_name,
-        }));
+      const res = await axios.get(`https://provinces.open-api.vn/api/p/${selectedCity.key}?depth=2`);
+      const districts = res.data.districts.map((district) => ({
+        key: district.code,
+        label: district.name,
+        value: district.name,
+      }));
 
-        setDistricts(districts);
+      setDistricts(districts);
 
-        // Set initial selected district based on current value
-        const selectedDistrict = districts.find(district => district.value === 'Hà Đông');
+      // Set initial selected district based on company data
+      if (company?.address?.district) {
+        const selectedDistrict = districts.find(
+          district => district.value === company.address.district
+        );
         if (selectedDistrict) {
-          handleSelectDistricts(selectedDistrict, { key: selectedDistrict.key });
+          handleSelectDistricts(selectedDistrict);
         }
-      })
-  }
+      }
+    } catch (error) {
+      console.error('Error fetching districts:', error);
+    }
+  };
 
-  const handleSelectDistricts = (selectedDistrict, option) => {
-    setWards([]);
 
-    axios.get(`https://vapi.vnappmob.com/api/province/ward/${option.key}`)
-      .then(res => {
-        const wards = res.data.results.map((ward, index) => ({
-          id: index,
-          key: ward.ward_id,
-          label: ward.ward_name,
-          value: ward.ward_name,
-        }));
+  const handleSelectDistricts = async (selectedDistrict) => {
+    try {
+      setWards([]);
 
-        setWards(wards);
+      const res = await axios.get(`https://provinces.open-api.vn/api/d/${selectedDistrict.key}?depth=2`);
+      const wards = res.data.wards.map((ward) => ({
+        key: ward.code,
+        label: ward.name,
+        value: ward.name,
+      }));
 
-        // Set initial selected ward based on current value
-        const selectedWard = wards.find(ward => ward.value === 'Mỗ Lao');
+      setWards(wards);
+
+      // Set initial selected ward based on company data
+      if (company?.address?.ward) {
+        const selectedWard = wards.find(
+          ward => ward.value === company.address.ward
+        );
         if (selectedWard) {
-          setWards([selectedWard]);
+          setWards(wards); // Set all wards but highlight the selected one
         }
-      })
-  }
+      }
+    } catch (error) {
+      console.error('Error fetching wards:', error);
+    }
+  };
+
+
 
   const [form] = Form.useForm();
   const [messageApi, contextMessageHolder] = message.useMessage();
@@ -129,8 +149,10 @@ const EditCompanyProfile = () => {
   }
 
   console.log(company);
-  
+
   return (
+    console.log('company: ', company),
+    console.log('company?.address?.province: ', company?.address?.province),
     <div>
       {contextMessageHolder}
       <Form
@@ -153,7 +175,7 @@ const EditCompanyProfile = () => {
           label="Tên công ty"
           name="name"
         >
-          <Input placeholder="Tên công ty mới"  />
+          <Input placeholder="Tên công ty mới" />
         </Form.Item>
 
         <Form.Item
@@ -179,7 +201,19 @@ const EditCompanyProfile = () => {
             options={cities}
             required={false}
             placeholder="Chọn tỉnh/thành phố"
-            onSelect={handleSelectCitites}
+            onSelect={(value) => {
+              // Tìm city object dựa trên value string nhận được
+              const selectedCity = cities.find(
+                city => city.value === value || city.label === value
+              );
+
+              if (selectedCity) {
+                handleSelectCitites(selectedCity);
+              } else {
+                console.error('Không tìm thấy thành phố:', value);
+              }
+            }}
+
           />
         </Col>
         <Col span={6}>
@@ -190,7 +224,16 @@ const EditCompanyProfile = () => {
             options={districts} suffixIcon={<HiBuildingOffice2 />}
             required={false}
             placeholder="Chọn quận/huyện"
-            onSelect={handleSelectDistricts}
+            onSelect={(value) => {
+              const selectedDistrict = districts.find(
+                district => district.value === value || district.label === value
+              );
+
+              if (selectedDistrict) {
+                handleSelectDistricts(selectedDistrict);
+              }
+            }}
+
           />
         </Col>
         <Col span={6}>

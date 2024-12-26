@@ -99,7 +99,7 @@ function JobDetail() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   const handleSaveJob = async () => {
     if (savedJobs.some(job => job.jobId === jobId)) {
       messageApi.info('Bạn đã lưu tin này rồi.');
@@ -228,10 +228,10 @@ function JobDetail() {
                                       }
                                     }
                                   }}>
-                                    <Button 
-                                      size="large" 
-                                      className={styles.btnSave} 
-                                      onClick={handleSaveJob} 
+                                    <Button
+                                      size="large"
+                                      className={styles.btnSave}
+                                      onClick={handleSaveJob}
                                       loading={saving}
                                     >
                                       Lưu tin

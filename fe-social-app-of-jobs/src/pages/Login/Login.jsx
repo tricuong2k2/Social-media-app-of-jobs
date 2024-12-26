@@ -35,6 +35,8 @@ function CandidateLogin() {
     })
       .then(res => {
         dispatch(login(res.data));
+        localStorage.setItem('user', JSON.stringify(res.data));
+
         messageApi.success("Đăng nhập thành công", 1).then(() => {
           switch (values.role) {
             case "admin":

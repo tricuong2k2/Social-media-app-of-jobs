@@ -1,0 +1,21 @@
+.sidebarFriend {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebarFriend:hover {
+    border-radius: 6px;
+    background-color: lightgray;
+}
+  
+.sidebarFriendImg {
+    min-width: 32px;
+    max-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    white-space: nowrap;
+}

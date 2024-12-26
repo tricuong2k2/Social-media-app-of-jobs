@@ -6,6 +6,7 @@ const Employer = require("../models/Employer.model");
 const Job = require("../models/Job.model");
 const Application = require("../models/Application.model");
 const Candidate = require("../models/Candidate.model");
+const mongoose = require('mongoose');
 
 
 class EmployerController {
@@ -33,40 +34,49 @@ class EmployerController {
   // [POST] /api/employer/info/
   async updateInfo(req, res) {
     const mid = req.user.id;
-
     const info = req.body;
 
+    let session;
     try {
-      const session = await mongoose.startSession();
+      session = await mongoose.startSession();
       session.startTransaction();
 
-      const employer = await Employer.findOneAndUpdate({ member: mid }, {
-        department: info.department,
-      }, { new: true }).select("-__v")
+      const employer = await Employer.findOneAndUpdate(
+        { member: mid },
+        { department: info.department },
+        { new: true, session }
+      ).select("-__v");
 
       delete info.department;
 
-      const member = await Member.findOneAndUpdate({ _id: mid }, {
-        ...info,
-      }, { new: true }).select("-updatedAt -password -role -hidden -__v");
+      const member = await Member.findOneAndUpdate(
+        { _id: mid },
+        { ...info },
+        { new: true, session }
+      ).select("-updatedAt -password -role -hidden -__v");
 
       await session.commitTransaction();
-      session.endSession();
 
-      return res.json({
-        info: { 
-          ...employer.toObject(), 
+      return res.status(200).json({
+        info: {
+          ...employer.toObject(),
           member,
         },
       });
+
     } catch (error) {
       console.log(error);
-      await session.abortTransaction();
-      session.endSession();
-
-      return res.json(500).json({
+      if (session) {
+        await session.abortTransaction();
+      }
+      return res.status(500).json({
         message: error.toString(),
       });
+
+    } finally {
+      if (session) {
+        session.endSession();
+      }
     }
   }
 
@@ -77,7 +87,7 @@ class EmployerController {
         return res.status(400).json({
           message: "Chưa có file nào được tải lên!",
         });
-      
+
       const fileName = "avatar" + path.extname(req.file.originalname);
 
       const [files] = await bucket.getFiles({ prefix: `employer/${req.user.id}/avatar` });

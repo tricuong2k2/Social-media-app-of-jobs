@@ -1,17 +1,68 @@
-.container {
+@media (max-width: 1300px) {
+
+    .homeSidebar,
+    .homeRightbar {
+        display: none;
+        /* Ẩn sidebar và rightbar khi màn hình nhỏ */
+    }
+
+    .homeFeed {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        /* Đảm bảo phần feed chiếm toàn bộ chiều rộng khi ẩn sidebar và rightbar */
+        max-width: 100%;
+    }
+}
+
+/* Bố cục chung cho homeContainer */
+.homeContainer {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* Đảm bảo container tối thiểu bằng viewport height */
-}
-
-.content {
-    flex: 1;
-    /* Chiếm toàn bộ không gian còn lại */
-}
-
-.footer_main {
     width: 100%;
-    background-color: #f9f9f9;
-    padding: 20px 0;
+    justify-content: center;
+    /* Căn giữa các phần tử con */
+}
+
+/* Bố cục cho homeSidebar */
+.homeSidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 10;
+    /* Đảm bảo sidebar luôn ở phía trên */
+}
+
+/* Bố cục cho homeRightbar */
+.homeRightbar {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 10;
+    /* Đảm bảo rightbar luôn ở phía trên */
+}
+
+/* Bố cục cho homeFeed */
+.homeFeed {
+    margin-left: 250px;
+    /* Đẩy nội dung chính sang phải để tránh bị che khuất bởi sidebar */
+    margin-right: 250px;
+    /* Đẩy nội dung chính sang trái để tránh bị che khuất bởi rightbar */
+    min-width: 492px;
+    /* Đảm bảo chiều rộng tối thiểu cho nội dung */
+}
+
+/* Bố cục cho Feed, giúp căn chỉnh nội dung chính */
+.Feed {
+    margin-left: 250px;
+    margin-right: 250px;
+    align-self: center;
+    overflow-y: auto;
+    max-width: 900px;
+    padding: 16px;
 }

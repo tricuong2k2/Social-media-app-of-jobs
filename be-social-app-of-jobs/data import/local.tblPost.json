@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "675a644c0552a42e8aaf17b3"
+  },
+  "author_id": {
+    "$oid": "6724d50a642c80eac792ee18"
+  },
+  "content": "What if I developed a search engine like google but better?",
+  "media": [
+    "https://blog.google/static/blogv2/images/google-1000x1000.png?version=pr20241203-1753"
+  ],
+  "is_shared": false,
+  "original_post_id": null,
+  "visibility": "public",
+  "comments_count": 3,
+  "shares_count": 2,
+  "created_at": "2024-12-11T09:30:00Z",
+  "updated_at": "2024-12-11T09:30:00Z",
+  "updatedAt": {
+    "$date": "2024-12-12T10:59:46.900Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "675a66630552a42e8aaf17b5"
+  },
+  "author_id": {
+    "$oid": "6724dac336a01957617b49ac"
+  },
+  "content": "The idea so interesting, I will try it in the future",
+  "media": [
+    "https://blog.google/static/blogv2/images/google-1000x1000.png?version=pr20241203-1753"
+  ],
+  "is_shared": true,
+  "original_post_id": {
+    "$oid": "675a644c0552a42e8aaf17b3"
+  },
+  "visibility": "public",
+  "comments_count": 2,
+  "shares_count": 1,
+  "created_at": "2024-12-11T09:30:00Z",
+  "updated_at": "2024-12-11T09:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "675ac124a74b2a7a0cc22f60"
+  },
+  "author_id": {
+    "$oid": "6724dac336a01957617b49ac"
+  },
+  "content": "This is test2",
+  "media": [],
+  "is_shared": true,
+  "original_post_id": {
+    "$oid": "675a644c0552a42e8aaf17b3"
+  },
+  "visibility": "private",
+  "comments_count": 0,
+  "shares_count": 0,
+  "createdAt": {
+    "$date": "2024-12-12T10:55:32.910Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-12T10:55:32.910Z"
+  },
+  "__v": 0
+}]
