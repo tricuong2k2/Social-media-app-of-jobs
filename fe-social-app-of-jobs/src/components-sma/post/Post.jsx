@@ -199,7 +199,7 @@ export default function Post({ post, refreshPosts }) {
                 style={{ fontSize: "16px" }}
                 onClick={handleApplyClick}
               >
-                <Send />
+                <Send style={{ marginLeft: "10px" }} />
                 <span className="buttonTextApply">
                   Ứng tuyển {post.job_id.title}
                 </span>

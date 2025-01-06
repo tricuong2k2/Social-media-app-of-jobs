@@ -125,14 +125,13 @@
 }
 
 .button {
-  flex: 1;
   display: flex;
   height: 32px;
+  width: 100%;
   border: none;
   border-radius: 6px;
   align-items: center;
   justify-content: center;
-  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -150,6 +149,10 @@
 .buttonTextApply {
   margin-left: 5px;
   line-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .avatarContainer {

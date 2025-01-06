@@ -4,7 +4,7 @@ import Topbar from "../../components-sma/topbar/Topbar";
 import Sidebar from "../../components-sma/sidebar/Sidebar";
 import Feed from "../../components-sma/feed/Feed";
 import Rightbar from "../../components-sma/rightbar/Rightbar";
-import "./CadidateIndex.module.css";
+import styles from "./CadidateIndex.module.css";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setCandidateInfo } from "../../actions";
@@ -58,27 +58,14 @@ function Home() {
   return (
     <>
       <Topbar />
-      <div className="homeContainer">
-        <div
-          className="box-down"
-          style={{
-            color: "red",
-            width: "100px",
-            height: "auto",
-          }}
-        >
-          {/* <div>dada</div>
-          <Dropdown menu={{ items }} placement="bottomRight">
-            <LogoutOutlined style={{ fontSize: "20px", cursor: "pointer" }} />
-          </Dropdown> */}
-        </div>
-        <div className="homeSidebar">
+      <div className={styles.homeContainer}>
+        <div className={styles.homeSidebar}>
           <Sidebar />
         </div>
-        <div className="homeFeed">
+        <div className={styles.homeFeed}>
           <Feed posts={posts} />
         </div>
-        <div className="homeRightbar">
+        <div className={styles.homeRightbar}>
           <Rightbar />
         </div>
       </div>
