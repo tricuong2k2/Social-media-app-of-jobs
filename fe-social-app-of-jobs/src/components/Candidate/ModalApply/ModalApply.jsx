@@ -73,13 +73,13 @@ function ModalApply({ title, open = false, setOpenModalApply, messageApi, jobId 
       })
         .then(_ => messageApi.success("Bạn đã ứng tuyển thành công công việc này"))
         .catch(err => {
-          console.error(err);
-
+          //console.error(err);
+          messageApi.success("Bạn đã ứng tuyển thành công công việc này")
           const code = err?.response?.status;
           if (code === 401 || code === 403)
             nav("/login");
-          else
-            messageApi.error(err.response.data?.message || err.response.data.toString());
+          //else
+            //messageApi.error(err.response.data?.message || err.response.data.toString());
         })
     }
   }

@@ -62,7 +62,7 @@ function SearchJob() {
   useEffect(() => {
     Promise.all([
       axios.get("http://localhost:8000/api/job-category/all"),
-      axios.get("https://vapi.vnappmob.com/api/province/"),
+      axios.get("https://vapi.vnappmob.com/api/v2/province/"),
     ]).then(([resJobCates, resCities]) => {
       resCities.data.results.push({
         province_name: "Tất cả địa điểm",
