@@ -26,7 +26,7 @@ function Home() {
               nav("/employer/posted-jobs");
               break;
             default:
-              nav("/candidate/");
+              nav("/login");
               break;
           }
         })

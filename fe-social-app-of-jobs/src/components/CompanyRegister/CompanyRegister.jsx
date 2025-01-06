@@ -18,7 +18,7 @@ function CompanyRegister() {
   const [wards, setWards] = useState([]);
 
   useEffect(() => {
-    axios.get("https://vapi.vnappmob.com/api/province/")
+    axios.get("https://vapi.vnappmob.com/api/v2/province/")
       .then(res => {
         const cities = res.data.results.map((city, index) => ({
           id: index,
@@ -34,7 +34,7 @@ function CompanyRegister() {
   const handleSelectCitites = (_, option) => {
     setDistricts([]);
     setWards([]);
-    axios.get(`https://vapi.vnappmob.com/api/province/district/${option.key}`)
+    axios.get(`https://vapi.vnappmob.com/api/v2/province/district/${option.key}`)
       .then(res => {
         const districts = res.data.results.map((district, index) => ({
           id: index,
@@ -50,7 +50,7 @@ function CompanyRegister() {
 
   const handleSelectDistricts = (_, option) => {
     setWards([]);
-    axios.get(`https://vapi.vnappmob.com/api/province/ward/${option.key}`)
+    axios.get(`https://vapi.vnappmob.com/api/v2/province/ward/${option.key}`)
       .then(res => {
         const wards = res.data.results.map((ward, index) => ({
           id: index,
